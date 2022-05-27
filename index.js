@@ -18,11 +18,12 @@ db.connect((err) => {
 });
 
 //Create database
-app.get('/createdb', (req,res){
-    db.query(sql, (err)=>{
-        if(err){
-            throw err;
-        }
-        res.send("Database created!!!!");
-    });
-})
+app.get("/createdb", (req, res) => {
+  let sql = "CREATE DATABASE nodemysql";
+  db.query(sql, (err) => {
+    if (err) {
+      throw err;
+    }
+    res.send("Database created!!!!");
+  });
+});
