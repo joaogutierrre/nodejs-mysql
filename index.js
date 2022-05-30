@@ -39,3 +39,7 @@ app.get("/createemployee", (req, res) => {
     res.send("Emplyee table created");
   });
 });
+
+app.listen('3000', () =>{
+  console.log('Server running on port 3000!')
+})
